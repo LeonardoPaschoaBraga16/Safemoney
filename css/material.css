@@ -1,0 +1,59 @@
+/* Standalone material pages */
+.material-page__hero {
+    padding-block: 28px 0;
+    background: var(--color-background);
+}
+
+.material-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.material-page__back:hover {
+    color: var(--color-accent-dark);
+}
+
+.material-page__content {
+    padding-top: 32px;
+}
+
+.material-reader--standalone {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.material-reader--standalone .material-reader__header h1 {
+    margin-bottom: 16px;
+    color: var(--color-primary-dark);
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+}
+
+.material-placeholder {
+    padding: 64px 32px;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-background);
+    text-align: center;
+}
+
+.material-placeholder__icon {
+    margin-bottom: 16px;
+    color: var(--color-accent);
+    font-size: 48px;
+}
+
+.material-placeholder h3 {
+    margin-bottom: 12px;
+}
+
+.material-placeholder p {
+    max-width: 600px;
+    margin-inline: auto;
+    color: var(--color-text-muted);
+}
