@@ -32,13 +32,15 @@ $pageTitle = 'InvestmentTracker';
     <section class="section">
         <div class="container">
             <div class="tracker-page__card">
+                <!--
                 <span class="tracker-page__icon material-symbols-outlined" aria-hidden="true">monitoring</span>
                 <h2 class="section-title">Módulo em desenvolvimento</h2>
                 <p class="section-text">
                     A estrutura visual está preparada. A integração com a API, tratamento dos dados,
                     gráficos e demais funcionalidades do InvestmentTracker serão implementados na próxima etapa.
                 </p>
-                <a class="button button--primary" href="materiais.php">Voltar aos materiais</a>
+                <a class="button button--primary" href="materiais.php">Voltar aos materiais</a> -->
+                
             </div>
         </div>
     </section>
