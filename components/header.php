@@ -1,82 +1,110 @@
 <?php
-$basePath = $basePath ?? '';
+
+$basePath = $basePath ?? '../';
 $activePage = $activePage ?? '';
-$pageTitle = $pageTitle ?? 'SafeMoney';
+
+$navigationItems = [
+    'home' => [
+        'label' => 'Home',
+        'path' => 'index.php',
+    ],
+    'sobre' => [
+        'label' => 'Sobre Nós',
+        'path' => 'sobre.php',
+    ],
+    'objetivos' => [
+        'label' => 'Objetivos',
+        'path' => 'objetivos.php',
+    ],
+    'materiais' => [
+        'label' => 'Materiais',
+        'path' => 'materiais.php',
+    ],
+    'tracker' => [
+        'label' => 'InvestmentTracker',
+        'path' => 'tracker.php',
+    ],
+];
+
+$buildUrl = static function (string $path) use ($basePath): string {
+    return htmlspecialchars(
+        $basePath . 'pages/' . $path,
+        ENT_QUOTES,
+        'UTF-8'
+    );
+};
 ?>
+
 <header class="site-header">
     <div class="container site-header__inner">
-        <a class="logo" href="<?= htmlspecialchars($basePath) ?>index.php" aria-label="SafeMoney - Página inicial">
+
+        <a
+            class="logo"
+            href="<?= $buildUrl('index.php') ?>"
+            aria-label="SafeMoney - Página inicial"
+        >
             <span class="logo__symbol">$</span>afeMoney
         </a>
 
-        <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
-            <a class="main-nav__link <?= $activePage === 'home' ? 'main-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath) ?>index.php"
-               <?= $activePage === 'home' ? 'aria-current="page"' : '' ?>>
-                Home
-            </a>
+        <nav
+            class="main-nav"
+            aria-label="Navegação principal"
+        >
+            <?php foreach ($navigationItems as $key => $item): ?>
+                <?php $isActive = $activePage === $key; ?>
 
-            <a class="main-nav__link <?= $activePage === 'sobre' ? 'main-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath) ?>sobre.php"
-               <?= $activePage === 'sobre' ? 'aria-current="page"' : '' ?>>
-                Sobre Nós
-            </a>
-
-            <a class="main-nav__link <?= $activePage === 'objetivos' ? 'main-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath) ?>objetivos.php"
-               <?= $activePage === 'objetivos' ? 'aria-current="page"' : '' ?>>
-                Objetivos
-            </a>
-
-            <a class="main-nav__link <?= $activePage === 'materiais' ? 'main-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath) ?>materiais.php"
-               <?= $activePage === 'materiais' ? 'aria-current="page"' : '' ?>>
-                Materiais
-            </a>
-
-            <a class="main-nav__link <?= $activePage === 'tracker' ? 'main-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath) ?>tracker.php"
-               <?= $activePage === 'tracker' ? 'aria-current="page"' : '' ?>>
-                InvestmentTracker
-            </a>
+                <a
+                    class="main-nav__link <?= $isActive ? 'main-nav__link--active' : '' ?>"
+                    href="<?= $buildUrl($item['path']) ?>"
+                    <?= $isActive ? 'aria-current="page"' : '' ?>
+                >
+                    <?= htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8') ?>
+                </a>
+            <?php endforeach; ?>
         </nav>
 
-        <a class="button button--primary site-header__cta"
-           href="<?= htmlspecialchars($basePath) ?>materiais.php">
+        <a
+            class="button button--primary site-header__cta"
+            href="<?= $buildUrl('materiais.php') ?>"
+        >
             Começar agora
         </a>
 
-        <button class="menu-toggle"
-                type="button"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-                aria-controls="main-navigation">
-            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+        >
+            <span
+                class="material-symbols-outlined"
+                aria-hidden="true"
+            >menu</span>
         </button>
     </div>
 
-    <nav class="mobile-nav" id="mobile-navigation" aria-label="Navegação mobile">
-        <a class="mobile-nav__link <?= $activePage === 'home' ? 'mobile-nav__link--active' : '' ?>"
-           href="<?= htmlspecialchars($basePath) ?>index.php">
-            Home
-        </a>
-        <a class="mobile-nav__link <?= $activePage === 'sobre' ? 'mobile-nav__link--active' : '' ?>"
-           href="<?= htmlspecialchars($basePath) ?>sobre.php">
-            Sobre Nós
-        </a>
-        <a class="mobile-nav__link <?= $activePage === 'objetivos' ? 'mobile-nav__link--active' : '' ?>"
-           href="<?= htmlspecialchars($basePath) ?>objetivos.php">
-            Objetivos
-        </a>
-        <a class="mobile-nav__link <?= $activePage === 'materiais' ? 'mobile-nav__link--active' : '' ?>"
-           href="<?= htmlspecialchars($basePath) ?>materiais.php">
-            Materiais
-        </a>
-        <a class="mobile-nav__link <?= $activePage === 'tracker' ? 'mobile-nav__link--active' : '' ?>"
-           href="<?= htmlspecialchars($basePath) ?>tracker.php">
-            InvestmentTracker
-        </a>
-        <a class="button button--primary" href="<?= htmlspecialchars($basePath) ?>materiais.php">
+    <nav
+        class="mobile-nav"
+        id="mobile-navigation"
+        aria-label="Navegação mobile"
+    >
+        <?php foreach ($navigationItems as $key => $item): ?>
+            <?php $isActive = $activePage === $key; ?>
+
+            <a
+                class="mobile-nav__link <?= $isActive ? 'mobile-nav__link--active' : '' ?>"
+                href="<?= $buildUrl($item['path']) ?>"
+                <?= $isActive ? 'aria-current="page"' : '' ?>
+            >
+                <?= htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8') ?>
+            </a>
+        <?php endforeach; ?>
+
+        <a
+            class="button button--primary"
+            href="<?= $buildUrl('materiais.php') ?>"
+        >
             Começar agora
         </a>
     </nav>

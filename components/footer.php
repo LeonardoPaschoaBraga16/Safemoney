@@ -1,9 +1,49 @@
+<?php
+
+$basePath = $basePath ?? '';
+$activePage = $activePage ?? '';
+
+$navigationItems = [
+    'home' => [
+        'label' => 'Home',
+        'path' => 'index.php',
+    ],
+    'sobre' => [
+        'label' => 'Sobre Nós',
+        'path' => 'sobre.php',
+    ],
+    'objetivos' => [
+        'label' => 'Objetivos',
+        'path' => 'objetivos.php',
+    ],
+    'materiais' => [
+        'label' => 'Materiais',
+        'path' => 'materiais.php',
+    ],
+    'tracker' => [
+        'label' => 'InvestmentTracker',
+        'path' => 'tracker.php',
+    ],
+];
+
+$buildUrl = static function (string $path) use ($basePath): string {
+    return htmlspecialchars(
+        $basePath . $path,
+        ENT_QUOTES,
+        'UTF-8'
+    );
+};
+?>
+
 <footer class="site-footer">
     <div class="container site-footer__main">
+
         <div class="site-footer__brand">
-            <a class="logo logo--footer"
-               href="<?= htmlspecialchars($basePath ?? '') ?>index.php"
-               aria-label="SafeMoney - Página inicial">
+            <a
+                class="logo logo--footer"
+                href="<?= $buildUrl('index.php') ?>"
+                aria-label="SafeMoney - Página inicial"
+            >
                 <span class="logo__symbol">$</span>afeMoney
             </a>
 
@@ -12,33 +52,30 @@
             </p>
         </div>
 
-        <nav class="footer-nav" aria-label="Navegação do rodapé">
-            <a class="footer-nav__link <?= ($activePage ?? '') === 'home' ? 'footer-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath ?? '') ?>index.php">
-                Home
-            </a>
-            <a class="footer-nav__link <?= ($activePage ?? '') === 'sobre' ? 'footer-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath ?? '') ?>sobre.php">
-                Sobre Nós
-            </a>
-            <a class="footer-nav__link <?= ($activePage ?? '') === 'objetivos' ? 'footer-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath ?? '') ?>objetivos.php">
-                Objetivos
-            </a>
-            <a class="footer-nav__link <?= ($activePage ?? '') === 'materiais' ? 'footer-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath ?? '') ?>materiais.php">
-                Materiais
-            </a>
-            <a class="footer-nav__link <?= ($activePage ?? '') === 'tracker' ? 'footer-nav__link--active' : '' ?>"
-               href="<?= htmlspecialchars($basePath ?? '') ?>tracker.php">
-                InvestmentTracker
-            </a>
+        <nav
+            class="footer-nav"
+            aria-label="Navegação do rodapé"
+        >
+            <?php foreach ($navigationItems as $key => $item): ?>
+                <?php $isActive = $activePage === $key; ?>
+
+                <a
+                    class="footer-nav__link <?= $isActive ? 'footer-nav__link--active' : '' ?>"
+                    href="<?= $buildUrl($item['path']) ?>"
+                    <?= $isActive ? 'aria-current="page"' : '' ?>
+                >
+                    <?= htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8') ?>
+                </a>
+            <?php endforeach; ?>
         </nav>
+
     </div>
 
     <div class="site-footer__bottom">
         <div class="container">
-            <p>© <?= date('Y') ?> SafeMoney. Todos os direitos reservados.</p>
+            <p>
+                © <?= date('Y') ?> SafeMoney. Todos os direitos reservados.
+            </p>
         </div>
     </div>
 </footer>

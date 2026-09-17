@@ -101,7 +101,7 @@ $currencyJson = json_encode(
         JSON_THROW_ON_ERROR
     );
 
-$basePath = '';
+$basePath = '../';
 $activePage = 'tracker';
 $pageTitle = 'InvestmentTracker';
 ?>
