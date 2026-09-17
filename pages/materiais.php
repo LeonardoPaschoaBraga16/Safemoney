@@ -9,9 +9,13 @@ $pageDescription = 'Materiais educativos da SafeMoney sobre investimentos, segur
 $pageStyles = [
     'materiais.css',
 ];
+
+$pageScripts = [];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <?php include __DIR__ . '/../components/head.php'; ?>
 </head>
@@ -22,13 +26,15 @@ $pageStyles = [
 
 <main class="materials-page">
 
+    <!-- Hero -->
     <section class="materials-hero">
         <div class="container materials-hero__content">
+
             <span class="materials-hero__eyebrow">
                 Centro de Conhecimento
             </span>
 
-            <h1 class="display-title">
+            <h1 class="section-title">
                 Nossos Materiais
             </h1>
 
@@ -37,406 +43,571 @@ $pageStyles = [
             </p>
 
             <p class="materials-hero__description">
-                Explore os conteúdos abaixo e construa sua base de conhecimento antes de avançar
-                para conceitos mais complexos.
+                Encontre conteúdos para entender os fundamentos dos investimentos,
+                conhecer diferentes tipos de ativos, aprender sobre segurança e
+                dar os primeiros passos no mundo dos investimentos.
             </p>
+
         </div>
     </section>
 
-    <section class="materials-content section">
-        <div class="container materials-content__grid">
+    <!-- Materials catalog -->
+    <section class="materials-content">
+        <div class="container">
 
-            <aside class="materials-sidebar" aria-label="Categorias de materiais">
-                <div class="materials-sidebar__inner">
+            <!-- Fundamentos -->
+            <section class="materials-category">
 
-                    <h2 class="materials-sidebar__title">
-                        Materiais
-                    </h2>
+                <div class="materials-category__header">
+                    <span class="material-category__icon material-symbols-outlined" aria-hidden="true">
+                        school
+                    </span>
 
-                    <div class="materials-menu">
+                    <div>
+                        <p class="materials-category__eyebrow">
+                            Comece por aqui
+                        </p>
 
-                        <section class="material-group">
-                            <h2 class="material-group__title">
-                                Fundamentos
-                            </h2>
+                        <h2 class="materials-category__title">
+                            Fundamentos
+                        </h2>
 
-                            <ul class="material-list">
-                                <li>
-                                    <a class="material-link" href="materiais/o-que-e-investir.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            auto_stories
-                                        </span>
-
-                                        <span>O que é investir?</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/por-que-investir.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            lightbulb
-                                        </span>
-
-                                        <span>Por que investir?</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/historia-dos-investimentos.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            history
-                                        </span>
-
-                                        <span>História dos investimentos</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section class="material-group">
-                            <h2 class="material-group__title">
-                                Tipos de Investimento
-                            </h2>
-
-                            <ul class="material-list">
-                                <li>
-                                    <a class="material-link" href="materiais/tipos-de-investimentos.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            category
-                                        </span>
-
-                                        <span>Tipos de investimentos</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/renda-fixa.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            account_balance
-                                        </span>
-
-                                        <span>Renda Fixa</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/renda-variavel.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            trending_up
-                                        </span>
-
-                                        <span>Renda Variável</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/criptomoedas.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            currency_bitcoin
-                                        </span>
-
-                                        <span>Criptomoedas</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section class="material-group">
-                            <h2 class="material-group__title">
-                                Segurança
-                            </h2>
-
-                            <ul class="material-list">
-                                <li>
-                                    <a class="material-link" href="materiais/riscos-dos-investimentos.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            warning
-                                        </span>
-
-                                        <span>Riscos dos investimentos</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/seguranca-ao-investir.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            shield
-                                        </span>
-
-                                        <span>Segurança ao investir</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section class="material-group">
-                            <h2 class="material-group__title">
-                                Primeiros Passos
-                            </h2>
-
-                            <ul class="material-list">
-                                <li>
-                                    <a class="material-link" href="materiais/como-comecar-a-investir.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            rocket_launch
-                                        </span>
-
-                                        <span>Como começar a investir?</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/como-analisar-um-investimento.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            analytics
-                                        </span>
-
-                                        <span>Como analisar um investimento?</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section class="material-group">
-                            <h2 class="material-group__title">
-                                SafeMoney
-                            </h2>
-
-                            <ul class="material-list">
-                                <li>
-                                    <a class="material-link" href="materiais/como-utilizar-o-investment-tracker.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            monitoring
-                                        </span>
-
-                                        <span>Como utilizar o InvestmentTracker?</span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="material-link" href="materiais/glossario-financeiro.php">
-                                        <span
-                                            class="material-link__icon material-symbols-outlined"
-                                            aria-hidden="true"
-                                        >
-                                            menu_book
-                                        </span>
-
-                                        <span>Glossário financeiro</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-
+                        <p class="materials-category__description">
+                            Entenda os conceitos básicos antes de avançar para outros tipos de investimento.
+                        </p>
                     </div>
                 </div>
-            </aside>
 
-            <article class="material-reader">
+                <div class="materials-grid">
 
-                <header class="material-reader__header">
-
-                    <div class="material-reader__category">
-                        <span
-                            class="material-symbols-outlined"
-                            aria-hidden="true"
-                        >
-                            auto_stories
-                        </span>
-
-                        <span>Fundamentos</span>
-                    </div>
-
-                    <h2>O que é investir?</h2>
-
-                    <div class="material-meta">
-
-                        <span class="material-meta__item">
-                            <span
-                                class="material-symbols-outlined"
-                                aria-hidden="true"
-                            >
-                                schedule
-                            </span>
-
-                            5 min de leitura
-                        </span>
-
-                        <span class="material-meta__item">
-                            <span
-                                class="material-symbols-outlined"
-                                aria-hidden="true"
-                            >
-                                update
-                            </span>
-
-                            Atualizado em 15 Out 2023
-                        </span>
-
-                    </div>
-                </header>
-
-                <div class="material-article">
-
-                    <p>
-                        Neste material vamos entender o que significa investir e por que as pessoas investem.
-                        Investir, de forma simples, é colocar o seu dinheiro para trabalhar para você. Em vez
-                        de deixar seu capital parado, perdendo valor para a inflação, você o aloca em ativos
-                        que têm o potencial de gerar retornos ao longo do tempo.
-                    </p>
-
-                    <h3>
-                        O Conceito de Investimento
-                    </h3>
-
-                    <p>
-                        Muitas pessoas confundem poupar com investir. Poupar é simplesmente o ato de guardar
-                        dinheiro, gastando menos do que se ganha. Já investir é pegar esse dinheiro poupado
-                        e aplicá-lo com a expectativa de obter um rendimento. É a diferença entre guardar
-                        sementes em um cofre e plantá-las em um solo fértil.
-                    </p>
-
-                    <aside class="material-highlight">
-
-                        <span
-                            class="material-highlight__icon material-symbols-outlined"
-                            aria-hidden="true"
-                        >
+                    <a
+                        href="materiais/o-que-e-investir.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
                             lightbulb
                         </span>
 
-                        <div class="material-highlight__content">
-
-                            <h4>
-                                Ponto Chave
-                            </h4>
-
-                            <p>
-                                O objetivo principal dos investimentos não é enriquecer da noite para o dia,
-                                mas sim proteger o seu poder de compra e construir patrimônio de forma
-                                consistente e sustentável no longo prazo.
-                            </p>
-
-                        </div>
-                    </aside>
-
-                    <h3>
-                        Por que não deixar o dinheiro parado?
-                    </h3>
-
-                    <p>
-                        A resposta curta é: <strong>Inflação</strong>. A inflação é o aumento generalizado
-                        dos preços de bens e serviços. Quando a inflação acontece, o seu dinheiro perde
-                        poder de compra. Investir é uma das ferramentas utilizadas para buscar proteção
-                        contra esse efeito ao longo do tempo.
-                    </p>
-
-                    <figure class="material-image">
-                        <div
-                            class="material-image__placeholder"
-                            role="img"
-                            aria-label="Ilustração conceitual sobre crescimento financeiro"
-                        ></div>
-                    </figure>
-
-                </div>
-
-                <nav
-                    class="material-pagination"
-                    aria-label="Navegação entre materiais"
-                >
-
-                    <span
-                        class="pagination-button pagination-button--disabled"
-                        aria-disabled="true"
-                    >
-                        <span
-                            class="material-symbols-outlined"
-                            aria-hidden="true"
-                        >
-                            arrow_back
-                        </span>
-
-                        Anterior
-                    </span>
-
-                    <a
-                        class="pagination-button pagination-button--next"
-                        href="materiais/por-que-investir.php"
-                    >
-                        <span class="pagination-button__text">
-                            <span class="pagination-button__label">
-                                Próximo
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Fundamentos
                             </span>
 
-                            Por que investir?
-                        </span>
+                            <h3 class="material-card__title">
+                                O que é investir?
+                            </h3>
 
-                        <span
-                            class="material-symbols-outlined"
-                            aria-hidden="true"
-                        >
-                            arrow_forward
+                            <p class="material-card__description">
+                                Entenda o conceito de investimento e por que ele faz parte do planejamento financeiro.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
                         </span>
                     </a>
 
-                </nav>
+                    <a
+                        href="materiais/por-que-investir.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            flag
+                        </span>
 
-            </article>
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Fundamentos
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Por que investir?
+                            </h3>
+
+                            <p class="material-card__description">
+                                Conheça alguns dos motivos pelos quais as pessoas buscam investir seu dinheiro.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/historia-dos-investimentos.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            history
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Fundamentos
+                            </span>
+
+                            <h3 class="material-card__title">
+                                História dos investimentos
+                            </h3>
+
+                            <p class="material-card__description">
+                                Conheça como os investimentos evoluíram ao longo do tempo.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Tipos de investimento -->
+            <section class="materials-category">
+
+                <div class="materials-category__header">
+                    <span class="material-category__icon material-symbols-outlined" aria-hidden="true">
+                        account_balance
+                    </span>
+
+                    <div>
+                        <p class="materials-category__eyebrow">
+                            Conheça as opções
+                        </p>
+
+                        <h2 class="materials-category__title">
+                            Tipos de Investimento
+                        </h2>
+
+                        <p class="materials-category__description">
+                            Conheça diferentes categorias de investimentos e suas principais características.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+
+                    <a
+                        href="materiais/tipos-de-investimentos.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            category
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Tipos de Investimento
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Tipos de investimentos
+                            </h3>
+
+                            <p class="material-card__description">
+                                Tenha uma visão geral das principais categorias de investimentos.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/renda-fixa.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            savings
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Tipos de Investimento
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Renda Fixa
+                            </h3>
+
+                            <p class="material-card__description">
+                                Entenda como funciona a renda fixa e quais são suas características.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/renda-variavel.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            monitoring
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Tipos de Investimento
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Renda Variável
+                            </h3>
+
+                            <p class="material-card__description">
+                                Conheça a renda variável e entenda como seus valores podem oscilar.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/criptomoedas.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            currency_bitcoin
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Tipos de Investimento
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Criptomoedas
+                            </h3>
+
+                            <p class="material-card__description">
+                                Entenda o que são criptomoedas e conheça suas principais características e riscos.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Segurança -->
+            <section class="materials-category">
+
+                <div class="materials-category__header">
+                    <span class="material-category__icon material-symbols-outlined" aria-hidden="true">
+                        security
+                    </span>
+
+                    <div>
+                        <p class="materials-category__eyebrow">
+                            Invista com informação
+                        </p>
+
+                        <h2 class="materials-category__title">
+                            Segurança
+                        </h2>
+
+                        <p class="materials-category__description">
+                            Aprenda sobre riscos e cuidados importantes antes de tomar decisões financeiras.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+
+                    <a
+                        href="materiais/riscos-dos-investimentos.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            warning
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Segurança
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Riscos dos investimentos
+                            </h3>
+
+                            <p class="material-card__description">
+                                Conheça diferentes tipos de riscos presentes nos investimentos.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/seguranca-ao-investir.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            verified_user
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Segurança
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Segurança ao investir
+                            </h3>
+
+                            <p class="material-card__description">
+                                Veja cuidados que podem ajudar a tornar sua jornada de investimentos mais segura.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- Primeiros passos -->
+            <section class="materials-category">
+
+                <div class="materials-category__header">
+                    <span class="material-category__icon material-symbols-outlined" aria-hidden="true">
+                        play_arrow
+                    </span>
+
+                    <div>
+                        <p class="materials-category__eyebrow">
+                            Comece sua jornada
+                        </p>
+
+                        <h2 class="materials-category__title">
+                            Primeiros Passos
+                        </h2>
+
+                        <p class="materials-category__description">
+                            Conteúdos para quem está começando a conhecer o universo dos investimentos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+
+                    <a
+                        href="materiais/como-comecar-a-investir.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            rocket_launch
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Primeiros Passos
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Como começar a investir?
+                            </h3>
+
+                            <p class="material-card__description">
+                                Conheça os primeiros passos para começar a estudar e entender os investimentos.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/como-analisar-um-investimento.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            analytics
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                Primeiros Passos
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Como analisar um investimento?
+                            </h3>
+
+                            <p class="material-card__description">
+                                Aprenda alguns conceitos que podem ajudar na análise de um investimento.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- SafeMoney -->
+            <section class="materials-category">
+
+                <div class="materials-category__header">
+                    <span class="material-category__icon material-symbols-outlined" aria-hidden="true">
+                        auto_awesome
+                    </span>
+
+                    <div>
+                        <p class="materials-category__eyebrow">
+                            Conheça a SafeMoney
+                        </p>
+
+                        <h2 class="materials-category__title">
+                            SafeMoney
+                        </h2>
+
+                        <p class="materials-category__description">
+                            Aprenda a utilizar a plataforma e consulte conceitos importantes do universo financeiro.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="materials-grid">
+
+                    <a
+                        href="materiais/como-utilizar-o-investment-tracker.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            query_stats
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                SafeMoney
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Como utilizar o InvestmentTracker?
+                            </h3>
+
+                            <p class="material-card__description">
+                                Aprenda a utilizar a ferramenta da SafeMoney para acompanhar cotações históricas.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                    <a
+                        href="materiais/glossario-financeiro.php"
+                        class="material-card"
+                    >
+                        <span class="material-card__icon material-symbols-outlined" aria-hidden="true">
+                            menu_book
+                        </span>
+
+                        <div class="material-card__content">
+                            <span class="material-card__category">
+                                SafeMoney
+                            </span>
+
+                            <h3 class="material-card__title">
+                                Glossário financeiro
+                            </h3>
+
+                            <p class="material-card__description">
+                                Consulte termos e conceitos financeiros de forma simples e organizada.
+                            </p>
+                        </div>
+
+                        <span class="material-card__action">
+                            Ler material
+                            <span class="material-symbols-outlined" aria-hidden="true">
+                                arrow_forward
+                            </span>
+                        </span>
+                    </a>
+
+                </div>
+
+            </section>
+
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="materials-cta">
-
         <div class="container">
 
             <div class="materials-cta__card">
 
-                <div
+                <span
                     class="materials-cta__decoration materials-cta__decoration--top"
                     aria-hidden="true"
-                ></div>
+                ></span>
 
-                <div
+                <span
                     class="materials-cta__decoration materials-cta__decoration--bottom"
                     aria-hidden="true"
-                ></div>
+                ></span>
 
                 <div class="materials-cta__content">
 
@@ -444,27 +615,32 @@ $pageStyles = [
                         class="materials-cta__icon material-symbols-outlined"
                         aria-hidden="true"
                     >
-                        monitoring
+                        query_stats
                     </span>
 
                     <h2>
-                        Quer acompanhar o mercado?
+                        Quer acompanhar as cotações?
                     </h2>
 
                     <p>
-                        Conheça o InvestmentTracker e aprenda a acompanhar informações sobre diferentes
-                        ativos com nossa ferramenta.
+                        Utilize o InvestmentTracker para consultar valores históricos
+                        de moedas e entender melhor como as cotações variam ao longo do tempo.
                     </p>
 
                     <a
-                        class="button button--gold"
                         href="tracker.php"
+                        class="button button--primary"
                     >
-                        Conhecer o InvestmentTracker
+                        Acessar InvestmentTracker
+                        <span class="material-symbols-outlined" aria-hidden="true">
+                            arrow_forward
+                        </span>
                     </a>
 
                 </div>
+
             </div>
+
         </div>
     </section>
 
