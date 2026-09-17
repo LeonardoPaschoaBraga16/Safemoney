@@ -67,8 +67,8 @@
     inset: 0;
     background: linear-gradient(
         135deg,
-        var(--color-surface-low),
-        var(--color-surface-medium)
+        var(--color-surface-muted),
+        var(--color-surface-high)
     );
     opacity: 0.5;
 }
@@ -87,7 +87,7 @@
     width: min(100% - 80px, var(--container-width));
     padding-block: 48px;
     border-radius: var(--radius-lg);
-    background: var(--color-surface-low);
+    background: var(--color-surface-muted);
 }
 
 .origin__content {
@@ -184,7 +184,7 @@
 }
 
 .purpose-card__statement {
-    color: var(--color-accent-light);
+    color: var(--color-accent);
     font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 700;
@@ -278,7 +278,7 @@
 }
 
 .team-member:hover {
-    background: var(--color-surface-low);
+    background: var(--color-surface-muted);
 }
 
 .team-member__icon {
