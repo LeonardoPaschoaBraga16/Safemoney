@@ -161,11 +161,7 @@ $pageScripts = [];
 
                     <figure class="material-image">
 
-                        <div
-                            class="material-image__placeholder"
-                            role="img"
-                            aria-label="Ilustração conceitual sobre crescimento financeiro"
-                        ></div>
+                        <img src="../../assets/images/materials/growth.png" alt="">
 
                     </figure>
 

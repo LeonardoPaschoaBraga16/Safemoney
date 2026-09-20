@@ -417,7 +417,7 @@ $pageStyles = [
 
             <div class="tracker-preview__visual glass-card">
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQqcnE2rdrLa6nUiiZKEn6Tzk3KLJezyi_9FehQGeNuEn81JA0H1e9wG6--5i07pPKtFa2KA9RM5OPJ5c_f3c_TsAd4SfO4qNNa73FJe7REaQYg8W9tc6YyhaCZR43hs-87BASU_YXLfkFvXU-slYCV54CgIgIkppOZ2cbab3ICvqGd7y-cBUXiQ7Q2TdNjZQA8lMgkyF7cjXBnSLkNKql-SCWBzHwtnMxYwhlp7gVjMxWNes5Gdsk8Yg"
+                    src="../assets/images/home/InvestmentTracker.png"
                     alt="Interface ilustrativa do InvestmentTracker com gráfico de evolução."
                 >
             </div>

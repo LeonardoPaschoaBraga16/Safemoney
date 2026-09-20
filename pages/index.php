@@ -63,7 +63,7 @@ $pageStyles = [
                 aria-hidden="true"
             >
                 <div class="hero__visual-card">
-                    <div class="hero__visual-image"></div>
+                    <img src="../assets/images/home/Investment.png" alt="">
                 </div>
 
                 <div class="hero__decoration hero__decoration--gold"></div>
@@ -94,7 +94,7 @@ $pageStyles = [
 
             <div class="tracker-preview__visual">
                 <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM5VB_Lc1FFiukwSWRmlEWpmZH_xrPyH86dgalmM_iRKcnp8FofmuZIKd_eFm4q-EErz6_DtwtwruWwqWB4ULKWHIHb7DIBQduKZ73bQw6U5zj-fYlhL_DoaodI5RL-cgiBeY6IhMxKwSiRDB_W6QbAHuY8BYo9rMqoAVbDMq8Nly-vOUozx_rSH1Xgppt0g-Xm0r63m2hbIOTsEz2GAEhhnY6YwxATWyHXIcASdtJpZumpzWDXn2XMQ"
+                    src="..\assets\images\home\InvestmentTracker.png"
                     alt="Prévia do painel do InvestmentTracker"
                 >
             </div>
@@ -232,11 +232,7 @@ $pageStyles = [
                 <div class="proposal__circle">
                     <div class="proposal__circle-inner">
 
-                        <span class="material-symbols-outlined proposal__icon">
-                            public
-                        </span>
-
-                        <div class="proposal__image"></div>
+                        <img src="../assets/images/home/Purpose.png" alt="">
 
                     </div>
                 </div>
@@ -416,114 +412,6 @@ $pageStyles = [
             >
                 Começar agora
             </a>
-
-        </div>
-    </section>
-
-
-    <!-- =====================================================
-         Contato
-         ===================================================== -->
-
-    <section class="section">
-        <div class="container contact">
-
-            <div class="contact__intro">
-                <h2 class="section-title">
-                    Fale Conosco
-                </h2>
-
-                <p class="section-text">
-                    Tem alguma dúvida ou sugestão? Envie-nos uma mensagem e entraremos
-                    em contato o mais breve possível.
-                </p>
-
-                <div class="contact__email">
-                    <span
-                        class="material-symbols-outlined"
-                        aria-hidden="true"
-                    >
-                        mail
-                    </span>
-
-                    <span>
-                        contato@safemoney.com.br
-                    </span>
-                </div>
-            </div>
-
-
-            <div class="contact-form-card">
-                <form
-                    class="contact-form"
-                    action="#"
-                    method="POST"
-                >
-
-                    <div class="form-field">
-                        <label for="name">
-                            Nome
-                        </label>
-
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            required
-                        >
-                    </div>
-
-
-                    <div class="form-field">
-                        <label for="email">
-                            E-mail
-                        </label>
-
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                        >
-                    </div>
-
-
-                    <div class="form-field">
-                        <label for="subject">
-                            Assunto
-                        </label>
-
-                        <input
-                            id="subject"
-                            name="subject"
-                            type="text"
-                            required
-                        >
-                    </div>
-
-
-                    <div class="form-field">
-                        <label for="message">
-                            Mensagem
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                        ></textarea>
-                    </div>
-
-
-                    <button
-                        class="button button--primary button--full"
-                        type="submit"
-                    >
-                        Enviar Mensagem
-                    </button>
-
-                </form>
-            </div>
 
         </div>
     </section>
