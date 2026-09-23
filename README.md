@@ -1,4 +1,4 @@
-# SafeMoney — versão PHP / Clean Code
+# SafeMoney — Um novo jeito de investir
 
 ## Objetivo
 
