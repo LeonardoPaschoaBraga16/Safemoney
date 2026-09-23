@@ -94,7 +94,7 @@ $pageStyles = [
 
             <div class="tracker-preview__visual">
                 <img
-                    src="..\assets\images\home\InvestmentTracker.png"
+                    src="../assets/images/home/InvestmentTracker.png"
                     alt="Prévia do painel do InvestmentTracker"
                 >
             </div>

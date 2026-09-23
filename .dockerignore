@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+.github
+
+# IDEs e editores
+.vscode
+.idea
+
+# Arquivos de ambiente e credenciais
+.env
+.env.*
+*.pem
+*.key
+
+# Dependências locais
+node_modules/
+vendor/
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
