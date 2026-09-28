@@ -1,22 +1,5 @@
 # SafeMoney — Um novo jeito de investir
 
-## Objetivo
-
-Esta versão transforma o protótipo gerado pelo Stitch em uma base PHP organizada, reutilizável e preparada para evolução.
-
-### Principais decisões
-
-- PHP é a base das páginas.
-- Header e Footer são componentes compartilhados.
-- Cada página possui HTML/PHP próprio e CSS específico.
-- O CSS global concentra tokens de design, reset, tipografia, layout e componentes compartilhados.
-- O CSS de página contém somente regras específicas da página.
-- JavaScript compartilhado controla apenas a navegação mobile.
-- Materiais possuem páginas individuais reais em `pages/materiais/`.
-- O InvestmentTracker possui uma página inicial funcional como placeholder enquanto a integração de dados é desenvolvida.
-- Não foi utilizado Tailwind no código final.
-- Os caminhos são tratados por `$basePath` para que componentes funcionem tanto em páginas de primeiro nível quanto nas páginas aninhadas de materiais.
-
 ## Estrutura
 
 ```text
@@ -73,10 +56,8 @@ Depois abra:
 http://localhost:8000/
 ```
 
-## Próximos passos recomendados
+## Acesso pelo Render
 
-1. Substituir imagens externas por arquivos locais em `assets/images/`.
-2. Desenvolver os conteúdos restantes dos materiais.
-3. Implementar o InvestmentTracker em módulos separados.
-4. Integrar a API de ativos.
-5. Adicionar testes e validações para o backend quando a lógica PHP for introduzida.
+```text
+https://safemoney-lnbf.onrender.com
+```
